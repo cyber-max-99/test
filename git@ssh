@@ -1,0 +1,14 @@
+i know github has method two access their repo(so, called cloud directory) using Terminal .it's...
+  1.Through https:// put user name and the authtoken created from devsetting put this password 
+  2.second is via ssh(secure shell) which use public key which store in ~/.ssh/ folder in your local machine.Then, copy your public key   and paste in on github ssh & gpg section .and save this key .
+  
+*.*>if you want to create the ssh-key-gen custome name .pub file then you have to identified the public key on ~/.ssh/config file
+via using vim or any other text editor you wish .
+command : sudo vim ~/.ssh/config
+ 
+and the spacifie the site or user name or pub file like do below...
+  Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+  IdentitiesOnly yes
